@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>{% block title %}Home {% endblock title %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-$END$
+<nav class="header">
+    <a href="/" class="logo">ADVENTURE GAME</a>
+    <ul class="main-nav">
+      <li>
+        <a href="/" class="nav-links">Home</a>
+      </li>
+      <li>
+        <a href="/" class="nav-links">Start Game</a>
+      </li>
+      <li>
+        <a href="/" class="nav-links">About Game</a>
+      </li>
+    </ul>
+  </nav>
+<div class="wrapper">
+    {% block content %}
+            if you see this, something is wrong!
+        {% endblock content %}
+</div>
+<div class="footer">
+    footer
+</div>
 </body>
 </html>
