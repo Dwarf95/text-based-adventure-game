@@ -1,17 +1,32 @@
 {% extends 'base.html' %}
-{% block title %}STEP-1{% endblock title %}
+{% block title %}PATH MOUNTAIN{% endblock title %}
 {% block content %}
 {% load static %}
 
 <div class="wrapper-container">
     <div class="container">
-      <div class="container-header">
-        MOUNTAIN
+      <div class="conatainer-content">
+           {% if status == -1 %}
+              <p class="fade-in-text">
+                  Ziac slowly starts climbing over the mountain and when he was already at the point where he can’t go back he gets attacked by a huge eagle. The eagle had a ripped piece of clothing stuck in between his claws that belonged to Sophie.
+                It seems like he was carrying Sophie.
+                 <br><br>
+                Ziac is left with the two only choices, and they are to keep fighting the eagle and hope he will overpower him. Or he should let the eagle take him away.
+              </p>
+          {% elif status == 1 or status == 2 %}
+          <p class="fade-in-text flex justify-center align-center">
+              <i class="far fa-times-circle color-danger" style="margin-right: 10px;"></i>
+            {{text}}
+          </p>
+          {% endif %}
       </div>
-      <div class="conatainer-content"></div>
       <div class="container-actions">
-          <a href="/step-2-mountains"> <button type="button" class="danger-btn">PATH (MOUNTAINS)</button> </a>
-          <a href="/step-2-river"> <button type="button" class="ok-btn">PATH (SLOW RIVER)</button> </a>
+          {% if status == -1 %}
+            <a href="/path_mountain/1"  class="danger-btn"> KEEP FIGHTING THE EAGLE</a>
+            <a href="/path_mountain/2" class="ok-btn"> LET THE EAGLE CARRY HIM AWAY</a>
+          {% else %}
+            <a href="/intro"  class="danger-btn"> PLAY AGAIN</a>
+          {% endif %}
       </div>
     </div>
 </div>

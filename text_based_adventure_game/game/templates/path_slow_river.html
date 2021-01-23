@@ -1,17 +1,35 @@
 {% extends 'base.html' %}
-{% block title %}STEP-2{% endblock title %}
+{% block title %}PATH SLOW RIVER{% endblock title %}
 {% block content %}
 {% load static %}
 
 <div class="wrapper-container">
     <div class="container">
-      <div class="container-header">
-        RIVER
+      <div class="conatainer-content flex flex-column justify-center align-center">
+          {% if status == 4 %}
+          <i class="far fa-check-circle color-success"></i>
+          {% endif %}
+          {% if status == -1 %}
+          <p class="fade-in-text">
+            Ziac starts approaching the river beside which he finds a small canoe. He hops on
+            the canoe and starts rowing down the river with hope to see any sign of his sister.
+            He rowed and rowed for days until he saw a house a bit further from the river.
+            Do you think he should check it out? Or continue rowing and hope for the best?</p>
+          {% elif status == 1 or status == 2 or status == 3 or status == 4 %}
+            {{text}}
+          {% endif %}
       </div>
-      <div class="conatainer-content"></div>
       <div class="container-actions">
-          <button type="button" class="danger-btn">NO</button>
-          <a href="/step-1"> <button type="button" class="ok-btn">YES</button> </a>
+          {% if status == -1 %}
+              <a href="/path_slow_river/1" class="danger-btn">DO YOU THINK HE SHOULD CHECK IT OUT</a>
+              <a href="/path_slow_river/2" class="ok-btn">CONTINUE ROWING AND HOPE FOR THE BEST</a>
+          {% elif status == 1 %}
+              <a href="/path_slow_river/3" class="danger-btn">GOING BACK ON THE RIVER</a>
+              <a href="/path_slow_river/4" class="ok-btn">CHECK THE HOUSE</a>
+          {% elif status == 4 or status == 3 or status == 2 %}
+           <a href="/" class="ok-btn">HOME</a>
+          {% endif %}
+
       </div>
     </div>
 </div>

@@ -26,12 +26,14 @@ position: absolute;
     top: 0;
 }
 .danger-btn{
-    width: 100px;
+    min-width: 100px;
     height: 40px;
     background: rgb(164,70,121);
     color: white;
     border: 1px solid rgb(164,70,121);
     border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
 }
 .danger-btn:hover{
     cursor: pointer !important;
@@ -39,13 +41,38 @@ position: absolute;
 .danger-btn:focus{
     outline: none !important;
 }
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.color-danger{
+     color: rgb(164,70,121) !important;
+     font-size: 4em !important;
+}
+.color-success{
+font-size: 4em !important;
+    color: rgb(2,151,161);
+}
+.conatainer-content{
+    margin-bottom: 1.5em;
+}
 .ok-btn{
-    width: 100px;
+    min-width: 100px;
     height: 40px;
     background: rgb(2,151,161);
     color: white;
     border-radius: 5px;
     border: 1px solid rgb(2,151,161);
+    padding: 10px;
+    text-decoration: none;
 }
 .ok-btn:hover{
 cursor: pointer !important;
