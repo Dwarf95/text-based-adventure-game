@@ -118,7 +118,7 @@ z-index: 200;
 
 .container {
       width: 900px;
-      height: 555px;
+      height: auto;
     max-width: 80%;
     background-color: white;
     padding: 20px;

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}STEP-1{% endblock title %}
+{% block content %}
+{% load static %}
+
+<div class="wrapper-container">
+    <div class="container">
+      <div class="container-header">
+        MOUNTAIN
+      </div>
+      <div class="conatainer-content"></div>
+      <div class="container-actions">
+          <a href="/step-2-mountains"> <button type="button" class="danger-btn">PATH (MOUNTAINS)</button> </a>
+          <a href="/step-2-river"> <button type="button" class="ok-btn">PATH (SLOW RIVER)</button> </a>
+      </div>
+    </div>
+</div>
+
+{% endblock content%}

@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
-{% block title %}GAME{% endblock title %}
+{% block title %}STEP-2{% endblock title %}
 {% block content %}
 {% load static %}
 
 <div class="wrapper-container">
     <div class="container">
       <div class="container-header">
-        {% include "intro_text.html" %}
+        RIVER
       </div>
       <div class="conatainer-content"></div>
       <div class="container-actions">
           <button type="button" class="danger-btn">NO</button>
-                    <button type="button" class="ok-btn">YEST</button>
+          <a href="/step-1"> <button type="button" class="ok-btn">YES</button> </a>
       </div>
     </div>
 </div>
