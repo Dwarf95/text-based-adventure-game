@@ -108,8 +108,9 @@ transform: scale(0.94);
     width: 100%;
     height: 64px;
     background-image: linear-gradient(260deg, #03989E 0%, #008EB3 25%, #6E6CB4 50%, #975496 75%, #AB3F69 100%);
-z-index: 200;
+    z-index: 200;
     position: relative;
+    text-align: center;
 }
 .main-nav {
   list-style-type: none;
