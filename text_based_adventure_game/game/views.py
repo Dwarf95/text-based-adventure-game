@@ -73,7 +73,8 @@ def path_slow_river_par(request, pk):
     if pk == 1:
         data_object["text"] = "Ziac has parked the canoe along side the river and started walking towards the house. " \
                               "The house was rather strange and creepy and there is a chance he might get kidnapped " \
-                              "and never be able to find his sister again.There is still time to go back, what choice " \
+                              "and never be able to find his sister again."
+        data_object["lesson"] = "There is still time to go back, what choice " \
                               "do you think Ziac should make? "
 
     elif pk == 2 or pk == 3:

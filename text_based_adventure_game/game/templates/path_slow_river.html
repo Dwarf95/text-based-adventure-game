@@ -14,16 +14,16 @@
             Ziac starts approaching the river beside which he finds a small canoe. He hops on
             the canoe and starts rowing down the river with hope to see any sign of his sister.
             He rowed and rowed for days until he saw a house a bit further from the river.
-            Do you think he should check it out? Or continue rowing and hope for the best?</p>
+              <b>Do you think he should check it out? Or continue rowing and hope for the best?</b></p>
           {% elif status == 1 %}
-          <p class="fade-in-text flex justify-center align-center">
-            {{text}}
+          <p class="fade-in-text flex justify-center align-center" style="display: block;">
+              {{text}}<b>{{lesson}}</b>
           </p>
           {% elif status == 4 %}
           <p class="fade-in-text flex justify-center align-center">
 
           {{text}} <br>
-             <p class="lesson-section" style="text-align: center; color: rgb(2,151,161) !important">{{lesson}}</p>
+             <p class="lesson-section" style="text-align: center; color: rgb(2,151,161) !important; padding-top:1rem;">{{lesson}}</p>
           </p>
           {% elif status == 3 or status == 2 %}
           <p class="fade-in-text flex justify-center align-center">
