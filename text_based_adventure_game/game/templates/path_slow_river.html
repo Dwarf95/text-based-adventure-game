@@ -15,19 +15,33 @@
             the canoe and starts rowing down the river with hope to see any sign of his sister.
             He rowed and rowed for days until he saw a house a bit further from the river.
             Do you think he should check it out? Or continue rowing and hope for the best?</p>
-          {% elif status == 1 or status == 2 or status == 3 or status == 4 %}
+          {% elif status == 1 %}
+          <p class="fade-in-text flex justify-center align-center">
             {{text}}
+          </p>
+          {% elif status == 4 %}
+          <p class="fade-in-text flex justify-center align-center">
+              <i class="far fa-times-circle color-danger" style="margin-right: 10px;"></i>
+            {{text}} <br>
+             <p class="lesson-section" style="text-align: center; color: rgb(2,151,161) !important">{{lesson}}</p>
+          </p>
+          {% elif status == 3 or status == 2 %}
+          <p class="fade-in-text flex justify-center align-center">
+              <i class="far fa-times-circle color-danger" style="margin-right: 10px;"></i>
+            {{text}} <br>
+          <p class="lesson-section">{{lesson}}</p>
+          </p>
           {% endif %}
       </div>
       <div class="container-actions">
           {% if status == -1 %}
-              <a href="/path_slow_river/1" class="danger-btn">DO YOU THINK HE SHOULD CHECK IT OUT</a>
-              <a href="/path_slow_river/2" class="ok-btn">CONTINUE ROWING AND HOPE FOR THE BEST</a>
+              <a href="/path_slow_river/1" class="danger-btn">CHECK IT OUT</a>
+              <a href="/path_slow_river/2" class="ok-btn">CONTINUE ROWING</a>
           {% elif status == 1 %}
               <a href="/path_slow_river/3" class="danger-btn">GOING BACK ON THE RIVER</a>
               <a href="/path_slow_river/4" class="ok-btn">CHECK THE HOUSE</a>
           {% elif status == 4 or status == 3 or status == 2 %}
-           <a href="/" class="ok-btn">HOME</a>
+           <a href="/intro"  class="danger-btn"> PLAY AGAIN</a>
           {% endif %}
 
       </div>

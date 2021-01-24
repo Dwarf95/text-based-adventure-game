@@ -81,6 +81,7 @@ cursor: pointer !important;
 outline: none !important;
 }
 .fade-in-text{
+margin: 0px;
 font-size: 20px;
 transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
@@ -178,6 +179,13 @@ z-index: 200;
 
 .btn:hover {
   border-color: black;
+}
+
+.lesson-section {
+    font-weight: bold; color:
+    rgb(164,70,121);
+    font-size:25px;
+    margin:0px;
 }
 
 .side-links {

@@ -24,14 +24,16 @@ def path_mountain(request):
 def path_mountain_par(request, pk):
     data_object = {
         "status": -1,
-        "text": ""
+        "text": "",
+        "lesson": ''
     }
     if pk == 1:
         data_object["text"] = "Ziac kept fighting with all the " \
                "skill he had, when all of a sudden he " \
                "slips and falls all the way down to the ground. " \
                "Ziac is critically injured and " \
-               "will not be able to continue the search. (wrong choice, you have failed)"
+               "will not be able to continue the search."
+        data_object["lesson"] = "(wrong choice, you have failed)"
     elif pk == 2:
         data_object["text"] = "Ziac gives up on fighting and lets the eagle carry him away. The eagle keeps flying and flying until " \
                "he reaches his nest in the middle of the mountains. Ziac notices that nobody is there in that nest " \
@@ -47,6 +49,8 @@ def path_mountain_par(request, pk):
                "quickly threw himself in that hole not knowing what is waiting for him outside it. As soon as Ziac " \
                "fell through the hole he realized it was a big mistake since he was falling into abyss. All he did " \
                "was closed his eyes and prepared to die. "
+        data_object["lesson"] = "(wrong choice, you have failed)"
+
     data_object["status"] = pk
     print(data_object)
     return render(request, 'path_mountain.html', data_object)
@@ -63,19 +67,22 @@ def path_slow_river(request):
 def path_slow_river_par(request, pk):
     data_object = {
         "status": -1,
-        "text": ""
+        "text": "",
+        "lesson": ''
     }
     if pk == 1:
         data_object["text"] = "Ziac has parked the canoe along side the river and started walking towards the house. " \
                               "The house was rather strange and creepy and there is a chance he might get kidnapped " \
                               "and never be able to find his sister again.There is still time to go back, what choice " \
                               "do you think Ziac should make? "
+
     elif pk == 2 or pk == 3:
         data_object["text"] = "Ziac starts walking back to the canoe and continues his search along the river. After " \
                               "some time has passed, Ziac notices that the river is moving faster and faster. Just as " \
                               "he realized what is waiting for him he reaches the waterfall and has no time to react. " \
-                              "Ziac falls down the waterfall and due to his lack of swimming skills he drowns. " \
-                              "LESSON: no risks, no results. "
+                              "Ziac falls down the waterfall and due to his lack of swimming skills he drowns. "
+        data_object["lesson"] = "LESSON: no risks, no results. "
+
     elif pk == 4:
         data_object["text"] = "Ziac continues walking towards the house in hopes that he could find his sister or any " \
                               "sign of her there. Ziac Approaches the main door and knocks on it. an old lady " \
@@ -89,6 +96,17 @@ def path_slow_river_par(request, pk):
                               "arises. Ziac remembers their grand grandpas words when they said that ones you come in " \
                               "the forest you never come out, and so it was true. Ziac and Sophie lived at the old " \
                               "lady’s house happily ever after. "
+        data_object["lesson"] = "You did it, you found your sister."
+
     data_object["status"] = pk
     return render(request, 'path_slow_river.html', data_object)
 
+
+def about_game(request):
+    data_object = {
+        "text": ''
+                'This is a mini game where you will be in the role of the main character '
+                'Zaic and you need to find your sister Sophie. Enjoy the short story, meet the main characters and '
+                'experience this exciting adventure with them. '
+    }
+    return render(request, 'about_game.html', data_object)
